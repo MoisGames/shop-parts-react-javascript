@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    
+}
+body {
+    flex-direction: row;
+    margin: 30px 250px 0 250px;
+}
