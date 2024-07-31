@@ -7,11 +7,16 @@ a img {
     border: white;
     background: url(../../../../../src/assets/logo_nav_bar.png) white no-repeat center / contain;
 }
-.logo_img:hover {
-    background-color: blue;
-}
 .main_nav {
+    display: flex;
     width: 100%;
-    height: 175px;
+    height: 100px;
     background-color: white;
+}
+.container_nav {
+    justify-content: end;
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    font-family: "PT Sans","Helvetica","Arial",sans-serif;
 }

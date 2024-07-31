@@ -3,6 +3,9 @@
     
 }
 body {
+    display: flex;
     flex-direction: row;
     margin: 30px 250px 0 250px;
+    width: 70vw;
+    font-family: "PT Sans","Helvetica","Arial",sans-serif;
 }

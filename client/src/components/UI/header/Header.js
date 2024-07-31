@@ -3,11 +3,10 @@ import NavBar from './NavBar/NavBar';
 import styles from './Header.module.css'
 
 const Header = () => {
-    // console.log(styles);
     return (
         <header className={styles.Header}>
             <NavBar />
-        <hr/>
+            <hr/>
         </header>
     );
 };

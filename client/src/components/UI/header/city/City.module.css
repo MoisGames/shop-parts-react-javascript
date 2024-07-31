@@ -1,0 +1,9 @@
+.city_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 600;
+    width: 200px;
+}
