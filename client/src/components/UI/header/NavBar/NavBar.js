@@ -7,7 +7,7 @@ const NavBar = () => {
     console.log(styles);
     return (
         <nav className={styles.main_nav}>
-            <a href='http://localhost:3001/'>
+            <a href='http://localhost:3000/'>
                 <div className={styles.logo_img}></div>
             </a>
             <City name='Красноярск' />
