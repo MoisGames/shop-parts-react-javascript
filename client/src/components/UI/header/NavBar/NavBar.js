@@ -4,7 +4,6 @@ import ButtonHeader from '../../button/ButtonHeader';
 import City from '../city/City';
 
 const NavBar = () => {
-    console.log(styles);
     return (
         <nav className={styles.main_nav}>
             <a href='http://localhost:3000/'>
@@ -12,9 +11,9 @@ const NavBar = () => {
             </a>
             <City name='Красноярск' />
             <div className={styles.container_nav}>
-                <ButtonHeader name = 'Купить'/>
-                <ButtonHeader name = 'Продать' />
-                <ButtonHeader name = 'Удалить' />
+                <ButtonHeader name = 'Оптовикам'/>
+                <ButtonHeader name = 'Наши магазины' />
+                <ButtonHeader name = 'Контакты' />
 
             </div>
         </nav>

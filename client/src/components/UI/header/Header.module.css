@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 70vw;
     height: 400px;
     background-color: white;
 }

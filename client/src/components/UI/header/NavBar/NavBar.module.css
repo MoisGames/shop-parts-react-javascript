@@ -5,11 +5,13 @@ a img {
     width: 15vw;
     height: 10vh;
     border: white;
-    background: url(../../../../../src/assets/logo_nav_bar.png) white no-repeat center / contain;
+    background: url(../../../../../src/assets/image/logo_nav_bar.png) white no-repeat center / contain;
 }
 .main_nav {
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 70vw  ;
     height: 100px;
     background-color: white;
 }
@@ -17,6 +19,6 @@ a img {
     justify-content: end;
     display: flex;
     flex-direction: row;
-    width: 60vw;
+    width: 100%;
     font-family: "PT Sans","Helvetica","Arial",sans-serif;
 }

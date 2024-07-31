@@ -4,7 +4,7 @@ import Header from '../UI/header/Header.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Header />
     </div>
   );

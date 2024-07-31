@@ -1,11 +1,18 @@
+@font-face {
+    font-family: "Montserrat-Light"; 
+    src: url("./assets/fonts/Montserrat-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+
 * {
     margin: 0;
-    
+    --primary-color-yellow: rgb(192, 192, 23);
 }
 body {
     display: flex;
     flex-direction: row;
-    margin: 30px 250px 0 250px;
-    width: 70vw;
-    font-family: "PT Sans","Helvetica","Arial",sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat-Light","Helvetica","Arial",sans-serif;
 }

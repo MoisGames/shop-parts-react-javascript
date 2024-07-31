@@ -1,13 +1,21 @@
+@font-face {
+    font-family: "Montserrat-Black"; 
+    src: url("../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
 .button_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 50px;
-    border: 2px solid blue;
-    border-radius: 10px;
     margin: 10px;
-    font-family: "PT Sans","Helvetica","Arial",sans-serif;
-    background-color: rgb(227, 227, 227);
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border: none;
+    background-color: white;
 }
 .button_header:hover {
-    box-shadow: 0px 0px 5px 0.5px blue;
-    
+    color: var(--primary-color-yellow);
 }
