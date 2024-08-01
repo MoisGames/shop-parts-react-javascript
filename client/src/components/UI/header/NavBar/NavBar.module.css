@@ -11,7 +11,7 @@ a img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70vw  ;
+    width: 70vw;
     height: 100px;
     background-color: white;
 }
