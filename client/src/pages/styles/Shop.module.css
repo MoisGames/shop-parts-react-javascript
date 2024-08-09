@@ -3,6 +3,7 @@
     justify-content: start;
     align-items: start;
     width: 70vw;
+    margin-top: 20px;
 }
 .shop__div_container_category {
     display: flex;
