@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.js';
 import styles from './index.module.css'
-
-export const isAuth = true;
+import PartStore from './store/PartStore.js';
+export const Context = createContext(null)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Context.Provider value={{
+      part: new PartStore(),
+  }}>
     <App />
-  </React.StrictMode>
+  </Context.Provider>
 );
 

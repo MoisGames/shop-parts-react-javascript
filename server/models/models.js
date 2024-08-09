@@ -14,16 +14,17 @@ const Basket = sequelize.define('basket', {
 
 const Part = sequelize.define('part', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    groups: { type: DataTypes.STRING, unique: true, allowNull: false },
-    brands: { type: DataTypes.STRING, unique: true, allowNull: false },
-    number_brand: { type: DataTypes.INTEGER, unique: false },
+    groups: { type: DataTypes.STRING, unique: false, allowNull: false },
+    brands: { type: DataTypes.STRING, unique: false, allowNull: false },
+    number_brand: { type: DataTypes.STRING, unique: false, allowNull: false },
     analogue: { type: DataTypes.STRING, unique: false, allowNull: false },
-    name_parts: { type: DataTypes.STRING, unique: true, allowNull: false },
+    name_parts: { type: DataTypes.STRING, unique: false, allowNull: false },
     price: { type: DataTypes.INTEGER, unique: false },
     diksona: { type: DataTypes.INTEGER, unique: false, },
     semaf: { type: DataTypes.INTEGER, unique: false },
     lado: { type: DataTypes.INTEGER, unique: false, },
     kalinina: { type: DataTypes.INTEGER, unique: false, },
+    img: { type: DataTypes.STRING, unique: false, allowNull: false },
 }, {freezeTableName: true}, {schema:'auto_parts'});
 
 const Brand = sequelize.define('brand', {

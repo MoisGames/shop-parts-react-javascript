@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Montserrat-Black"; 
+    src: url("../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+
+.categoryBar__list {
+    list-style-type: none;
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.categoryBar__list_item {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 300px;
+    margin: 5px;
+}
+
+.categoryBar__list_item:hover {
+    color: var(--primary-color-yellow);
+}
+.categoryBar__list_item:focus {
+    color: var(--primary-color-yellow);
+}

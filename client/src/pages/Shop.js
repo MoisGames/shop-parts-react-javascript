@@ -1,10 +1,20 @@
 import React from 'react';
-import Header from '../components/UI/header/Header';
+import styles from './styles/Shop.module.css'
+import CategoryBar from '../components/UI/categoryBar/CategoryBar';
+import BrandBar from '../components/UI/brandBar/BrandBar';
+import PartList from '../components/UI/PartList/PartList';
 
 const Shop = () => {
     return (
-        <main>
-            SHOP
+        <main className={styles.shop__main_container}>
+            <div className={styles.shop__div_container_category}>
+            <CategoryBar/>
+            
+            </div>
+            <div className={styles.shop__div_container_brand_part}>
+            <BrandBar/>
+            <PartList/>
+            </div>
         </main>
     );
 };

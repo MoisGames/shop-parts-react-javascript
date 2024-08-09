@@ -10,7 +10,7 @@ const basketRouter = require('./basketRouter')
 router.use('/user', userRouter),
 router.use('/category', categoryRouter),
 router.use('/brand', brandRouter),
-router.use('/parts', partsRouter),
+router.use('/part', partsRouter),
 router.use('/basket', basketRouter),
 
 

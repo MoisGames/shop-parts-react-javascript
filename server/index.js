@@ -6,6 +6,8 @@ const cors = require('cors');
 const router = require('./routes/index')
 const errorHandler = require('./middleware/ErrorHandlerMiddleWare')
 const models = require('./models/models')
+const fileUpload = require('express-fileupload')
+const path = require('path')
 
 const PORT = process.env.PORT || 5000
 
@@ -13,6 +15,9 @@ const app = express();
 
 app.use(cors()) // Подключаем cors
 app.use(express.json()) // Парсим json
+app.use(express.static(path.resolve(__dirname, 'static')))
+app.use(fileUpload({})) 
+
 app.use('/api', router)
 
 // Обработка ошибок, последний MiddleWare

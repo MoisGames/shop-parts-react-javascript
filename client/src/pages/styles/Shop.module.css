@@ -1,0 +1,16 @@
+.shop__main_container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 70vw;
+}
+.shop__div_container_category {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.shop__div_container_brand_part {
+    display: block;
+    justify-content: start;
+    align-items: start;
+}
