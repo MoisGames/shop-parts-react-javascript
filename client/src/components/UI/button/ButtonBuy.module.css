@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Montserrat-Black"; 
+    src: url("../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+.buttonBuy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 60px;
+    margin: 10px;
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 26px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+.buttonBuy {
+    padding: 20px;
+}

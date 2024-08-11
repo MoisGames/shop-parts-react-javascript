@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Montserrat-Black"; 
+    src: url("../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
 .partPage__container {
     display: flex;
 }
@@ -15,4 +21,49 @@
     width: 500px;
     height: 400px;
     margin: 10px;
+}
+.partPage__main_info_name {
+    font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
+}
+.partPage__main_info_brand {
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+.partPage__specification_sheet_container {
+    display: flex;
+    width: 500px;
+    height: 250px;
+    margin: 10px;
+}
+.partPage__specification_sheet_table {
+    width: 500px;
+    height: 250px;
+
+}
+.partPage__specification_sheet_first_column_design {
+    width: 250px;
+    font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
+}
+.partPage__specification_sheet_second_column_design {
+    width: 250px;
+}
+.partPage__price_container {
+    display: flex;
+    font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 28px;
+    width: 500px;
+    height: 40px;
+    justify-content: start;
+    align-items: start;
+    cursor: pointer;
+}
+.partPage__price {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 220px;
+}
+.partPage__price_button {
+    margin-left: 100px;
 }

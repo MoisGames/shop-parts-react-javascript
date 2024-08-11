@@ -3,17 +3,12 @@ import {makeAutoObservable} from 'mobx'
 export default class PartStore {
     constructor() {
         this._categories = [
-            {id:1, name:'Автомобильное масло'}, 
-            {id:2, name:'Автозапчасти для авто РФ'},
-            {id:3, name:'Автозапчасти для иномарок'},
-            {id:4, name:'Аккумуляторы'},
-        ]
-        this._brands = [
             {id:1, name:'Castrol', categoryId: 1}, 
             {id:2, name:' KOYO', categoryId: 4},
             {id:3, name:'555', categoryId: 2},
             {id:4, name:'Запчасти САС', categoryId: 3},
         ]
+        this._brands = []
         this._parts = [
             {id:341, groups:"Подшипники  KOYO",brands:"KOYO",number_brands:"RNU0727",analogue: "Отсутствует", name_parts: "RNU 0727 PZ  (LAND CR 80-задняя полуось) KOYO (90365-47013) 47-71-27", price: 1122, diksona: 1, semaf: 0,lado: 0,kalinina: 0, img: "https://img.hyperauto.ru/brands/koyo.png"}, 
             {id:342, groups:"ЗАПЧАСТИ САС",brands:"ЗАПЧАСТИ САС",number_brands:"RNU0727",analogue: "Отсутствует", name_parts: "RNU 0727 PZ  (LAND CR 80-задняя полуось) KOYO (90365-47013) 47-71-27", price: 1122, diksona: 1, semaf: 0,lado: 0,kalinina: 0, img: "https://img.hyperauto.ru/brands/koyo.png"},

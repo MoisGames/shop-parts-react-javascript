@@ -7,7 +7,7 @@
 .PartItem__container {
     margin: 5px;
     width: 200px;
-    height: 550px;
+    height: 45vh;
     cursor: pointer;
     border-bottom: 1px #3b444b solid;
     
@@ -20,14 +20,19 @@
     height: 100px;
     border-image-width: 0;
 }
-.PartItem__header {
-    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
-    font-size: 16px;
+.PartItem__name {
+    display: flex;
+    font-size: 20px;
+    height: 170px;
+    overflow: hidden;
+    
 }
-.PartItem__header:hover {
+.PartItem__name:hover {
     color: var(--primary-color-yellow);
 }
 .PartItem__price {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 28px;
 }
