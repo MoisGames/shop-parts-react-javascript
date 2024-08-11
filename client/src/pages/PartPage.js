@@ -45,6 +45,10 @@ const PartPage = () => {
                             <td className={styles.partPage__specification_sheet_first_column_design}>Группа:</td>
                             <td className={styles.partPage__specification_sheet_second_column_design}>{part.groups}</td>
                         </tr>
+                        <tr>
+                            <td className={styles.partPage__specification_sheet_first_column_design}>Артикул:</td>
+                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.id.padString(6, '000')}</td>
+                        </tr>
                     </table>
                 </div>
                 <div className={styles.partPage__price_container}>

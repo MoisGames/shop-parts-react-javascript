@@ -5,7 +5,7 @@ import BrandBar from '../components/UI/brandBar/BrandBar';
 import PartList from '../components/UI/PartList/PartList';
 import { observer } from 'mobx-react-lite';
 import { Context } from '../../src/index';
-import { fetchBrands, fetchCategories } from '../http/partAPI';
+import { fetchBrands, fetchCategories, fetchParts } from '../http/partAPI';
 
 const Shop = observer (() => {
     const {part} = useContext(Context)
@@ -13,6 +13,7 @@ const Shop = observer (() => {
     useEffect(() => {
         fetchCategories().then(data => part.setCategories(data))
         fetchBrands().then(data => part.setBrands(data))
+        fetchParts().then(data => part.setParts(data.rows))
     }, [])
 
     return (
