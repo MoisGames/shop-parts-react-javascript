@@ -7,7 +7,7 @@
 .PartItem__container {
     margin: 5px;
     width: 200px;
-    height: 350px;
+    height: 550px;
     cursor: pointer;
     border-bottom: 1px #3b444b solid;
     
@@ -26,4 +26,8 @@
 }
 .PartItem__header:hover {
     color: var(--primary-color-yellow);
+}
+.PartItem__price {
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 20px;
 }

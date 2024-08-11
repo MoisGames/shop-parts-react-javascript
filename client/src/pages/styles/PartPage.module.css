@@ -1,0 +1,18 @@
+.partPage__container {
+    display: flex;
+}
+.partPage__image_part_container {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+}
+.partPage__image_part {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+}
+.partPage__main_info {
+    width: 500px;
+    height: 400px;
+    margin: 10px;
+}

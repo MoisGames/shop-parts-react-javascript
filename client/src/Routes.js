@@ -3,12 +3,15 @@ import {
     BASKET_ROUTE, 
     OUR_SHOPS_ROUTE, 
     CONTACTS_ROUTE, 
-    WHOLE_SALERS_ROUTE } from './utils/const'
+    WHOLE_SALERS_ROUTE,
+    PART_ROUTE,
+        } from './utils/const'
 import Shop from './pages/Shop'
 import Basket from './pages/Basket'
 import OurShops from './pages/OurShops'
 import Contacts from './pages/Contacts'
 import WholeSalers from './pages/WholeSalers'
+import PartPage from './pages/PartPage'
 
 export const publicRoutes = [
     {
@@ -32,4 +35,8 @@ export const publicRoutes = [
         path: WHOLE_SALERS_ROUTE,
         Component: WholeSalers
     },
+    {
+        path: PART_ROUTE + '/:id',
+        Component: PartPage
+    }
 ]
