@@ -4,8 +4,16 @@
     font-style: normal; 
     font-weight: normal; 
   } 
-.partPage__container {
+.partPage__container_main {
     display: flex;
+}
+.partPage__container_brand {
+    display: flex;
+    flex-direction: column;
+}
+.partPage__container_info {
+    display: flex;
+    flex-direction: row;
 }
 .partPage__image_part_container {
     width: 300px;

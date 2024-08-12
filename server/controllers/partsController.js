@@ -40,7 +40,11 @@ class PartsController {
     }
 
     async getOne(req, res) {
-        
+        const {id} = req.params
+        const part = await Part.findOne(
+            {where: {id}},
+        )
+        return res.json(part)
     }
 }
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './PartItem.module.css'
-import { SYMBOL_RUB, PART_ROUTE } from '../../../utils/const';
+import {PART_ROUTE } from '../../../utils/const';
 import {useNavigate} from 'react-router-dom'
 import ButtonBuy from '../button/ButtonBuy';
 
 
 const PartItem = ({part}) => {
     const navigate = useNavigate()
-    console.log(process.env.REACT_APP_API_URL + part.img);
     
     return (
         <div 
@@ -24,7 +23,7 @@ const PartItem = ({part}) => {
                         {part.name_parts}
                         </div>
                         <div>
-                        Артикул: {part.id}
+                        Артикул: {part.id.toString().padStart(6, '0')}
                         </div>
                         <div className={styles.PartItem__price}>
                         {Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(part.price)}

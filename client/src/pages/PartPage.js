@@ -1,28 +1,39 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './styles/PartPage.module.css'
-import ButtonHeader from '../components/UI/button/ButtonHeader'
 import ButtonBuy from '../components/UI/button/ButtonBuy';
+import { useParams } from 'react-router-dom';
+import { fetchOneParts } from '../http/partAPI';
+import CategoryBar from '../components/UI/categoryBar/CategoryBar';
+import BrandBar from '../components/UI/brandBar/BrandBar';
 
 const PartPage = () => {
-    const part = {id:341,
-        groups:"Подшипники  KOYO",
-        brands:"KOYO",
-        number_brands:"RNU0727",
-        analogue: "Отсутствует", 
-        name_parts: "RNU 0727 PZ  (LAND CR 80-задняя полуось) KOYO (90365-47013) 47-71-27", 
-        price: 1122, 
-        diksona: 1, 
-        semaf: 0,
-        lado: 0,
-        kalinina: 0, 
-        img: "https://img.hyperauto.ru/brands/koyo.png"}
+    const [part, setPart] = useState({})
+    const {id} = useParams()
+    const availability = 0
+
+    useEffect(() => {
+        fetchOneParts(id).then(data => setPart(data))
+        
+    }, [])
+    console.log(part);
+    const AvailabilityPart = () => {
+        availability = part.diksona + part.lado + part.semaf
+        return availability
+    }
+    console.log(availability);
+    
     return (
-        <article className={styles.partPage__container}>
-            <div className={styles.partPage__image_part_container}>
+        
+        <article className={styles.partPage__container_main}>
+            <CategoryBar />
+            <div className={styles.partPage__container_brand}>
+            <BrandBar />
+            <div className={styles.partPage__container_info}>
+            <div className={styles.partPage__image_part_container}> 
                 <img 
                     alt='image_part' 
                     className={styles.partPage__image_part} 
-                    src={part.img}/>
+                    src={process.env.REACT_APP_API_URL + part.img}/>
             </div>
             <div className={styles.partPage__main_info}>
                 <h1 className={styles.partPage__main_info_name}>
@@ -35,7 +46,7 @@ const PartPage = () => {
                     <table className={styles.partPage__specification_sheet_table}>
                         <tr>
                             <td className={styles.partPage__specification_sheet_first_column_design}>Номер производителя:</td>
-                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.number_brands}</td>
+                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.number_brand}</td>
                         </tr>
                         <tr>
                             <td className={styles.partPage__specification_sheet_first_column_design}>Аналоги:</td>
@@ -47,7 +58,7 @@ const PartPage = () => {
                         </tr>
                         <tr>
                             <td className={styles.partPage__specification_sheet_first_column_design}>Артикул:</td>
-                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.id.padString(6, '000')}</td>
+                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.id}</td>
                         </tr>
                     </table>
                 </div>
@@ -55,6 +66,8 @@ const PartPage = () => {
                 <div className={styles.partPage__price}>{Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(part.price)}</div>
                 <div className={styles.partPage__price_button}><ButtonBuy name='Купить'/></div>
                 </div>
+            </div>
+            </div>
             </div>
         </article>
     );
