@@ -2,25 +2,29 @@ import React, { useContext, useEffect, useState } from 'react';
 import styles from './styles/PartPage.module.css'
 import ButtonBuy from '../components/UI/button/ButtonBuy';
 import { useParams } from 'react-router-dom';
-import { fetchOneParts } from '../http/partAPI';
+import { fetchOneParts} from '../http/partAPI';
 import CategoryBar from '../components/UI/categoryBar/CategoryBar';
 import BrandBar from '../components/UI/brandBar/BrandBar';
+import AvaibilityYes from '../components/availability/AvaibilityYes'
+import AvailabilityNo from '../components/availability/AvailabilityNo'
 
 const PartPage = () => {
     const [part, setPart] = useState({})
     const {id} = useParams()
-    const availability = 0
+    let availability = 0
+
+    const AvailabilityPart = () => {
+        availability = part.diksona + part.lado + part.semaf + part.kalinina
+        return availability
+    }
+    AvailabilityPart()
 
     useEffect(() => {
         fetchOneParts(id).then(data => setPart(data))
         
     }, [])
-    console.log(part);
-    const AvailabilityPart = () => {
-        availability = part.diksona + part.lado + part.semaf
-        return availability
-    }
-    console.log(availability);
+
+    
     
     return (
         
@@ -62,11 +66,26 @@ const PartPage = () => {
                         </tr>
                     </table>
                 </div>
-                <div className={styles.partPage__price_container}>
-                <div className={styles.partPage__price}>{Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(part.price)}</div>
-                <div className={styles.partPage__price_button}><ButtonBuy name='Купить'/></div>
+                
+
+                    <div className={styles.partPage__price_container}>
+                         <div className={styles.partPage__price}>
+                             {Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(part.price)}
+                         </div>
+                         <div className={styles.partPage__price_button}>
+                            {availability > 0 ?
+                            <ButtonBuy name='Купить' />
+                            :
+                            null
+                            }
+                         </div>
+                     </div>
+                     {availability > 0 ?
+                    <AvaibilityYes />
+                    :
+                    <AvailabilityNo />
+                    }
                 </div>
-            </div>
             </div>
             </div>
         </article>

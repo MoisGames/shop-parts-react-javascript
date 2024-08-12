@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Montserrat-Black"; 
+    src: url("../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+.aviabilityNo__container {
+    font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 28px;
+    color: red;
+    margin-left: 20px;
+}

@@ -55,12 +55,19 @@
 .partPage__specification_sheet_second_column_design {
     width: 250px;
 }
+.partPage__availability {
+    margin: 10px;
+    font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 28px;
+    color: red;
+}
 .partPage__price_container {
     display: flex;
+    flex-wrap: nowrap;
     font-family: "Montserrat-Black", 'Courier New', Courier, monospace;
     font-size: 28px;
     width: 500px;
-    height: 40px;
+    height: 100px;
     justify-content: start;
     align-items: start;
     cursor: pointer;

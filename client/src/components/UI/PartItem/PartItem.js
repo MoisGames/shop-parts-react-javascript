@@ -7,7 +7,11 @@ import ButtonBuy from '../button/ButtonBuy';
 
 const PartItem = ({part}) => {
     const navigate = useNavigate()
-    
+    // const AvailabilityPart = () => {
+    //     availability = part.diksona + part.lado + part.semaf + part.kalinina
+    //     return availability
+    // }
+
     return (
         <div 
             className={styles.PartItem__container} 
@@ -28,7 +32,7 @@ const PartItem = ({part}) => {
                         <div className={styles.PartItem__price}>
                         {Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(part.price)}
                         </div>
-                        <div>
+                        <div className={styles.partItem__availability_container}>
                             <ButtonBuy name='Купить'/>
                         </div>
                     </div>
