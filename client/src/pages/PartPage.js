@@ -7,9 +7,13 @@ import CategoryBar from '../components/UI/categoryBar/CategoryBar';
 import BrandBar from '../components/UI/brandBar/BrandBar';
 import AvaibilityYes from '../components/availability/AvaibilityYes'
 import AvailabilityNo from '../components/availability/AvailabilityNo'
+import AvailabilityStore from '../components/availability/store/AvailabilityStore';
+
+
 
 const PartPage = () => {
     const [part, setPart] = useState({})
+    
     const {id} = useParams()
     let availability = 0
 
@@ -78,13 +82,24 @@ const PartPage = () => {
                             :
                             null
                             }
+                            
                          </div>
                      </div>
+                     <>
                      {availability > 0 ?
-                    <AvaibilityYes />
-                    :
-                    <AvailabilityNo />
-                    }
+                        <>
+                            <AvaibilityYes />
+                            <AvailabilityStore />
+                        </>
+                    
+                        :
+                        <AvailabilityNo />
+                        
+                       
+                        }
+                     </>
+                        
+                     
                 </div>
             </div>
             </div>
