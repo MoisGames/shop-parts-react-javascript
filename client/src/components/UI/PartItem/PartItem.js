@@ -39,7 +39,7 @@ const PartItem = ({part}) => {
                             {availability > 0 ?
                             <>
                                 <ButtonBuy name='Купить'/>
-                                <AvaibilityYes />
+                                <AvaibilityYes /> 
                             </>
                             :
                                 <AvailabilityNo />

@@ -16,8 +16,11 @@
     width: innerhit;
 }
 .PartItem__logo {
-    width: 200px;
+    display: flex;
+    width: auto;
     height: 100px;
+    justify-content: center;
+    align-items: center;
     border-image-width: 0;
 }
 .PartItem__name {
