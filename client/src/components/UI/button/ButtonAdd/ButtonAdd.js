@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './ButtonAdd.module.css'
 
-const ButtonAdd = () => {
+const ButtonAdd = (props) => {
     return (
-        <div className={styles.buttonAdd__container}>
-            
-        </div>
+        <button className={styles.buttonAdd__container} onClick={props.onClick}>
+            {props.name}
+        </button>
     );
 };
 
