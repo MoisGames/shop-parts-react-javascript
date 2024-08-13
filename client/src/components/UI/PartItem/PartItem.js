@@ -42,8 +42,8 @@ const PartItem = ({part}) => {
                                 <AvaibilityYes />
                             </>
                             :
-                            <AvailabilityNo />
-                        }
+                                <AvailabilityNo />
+                            }
                             
                         </div>
                     </div>
