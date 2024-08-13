@@ -5,6 +5,7 @@ import {
     CONTACTS_ROUTE, 
     WHOLE_SALERS_ROUTE,
     PART_ROUTE,
+    ADMIN_ROUTE,
         } from './utils/const'
 import Shop from './pages/Shop'
 import Basket from './pages/Basket'
@@ -12,6 +13,8 @@ import OurShops from './pages/OurShops'
 import Contacts from './pages/Contacts'
 import WholeSalers from './pages/WholeSalers'
 import PartPage from './pages/PartPage'
+import { Component } from 'react'
+import Admin from './pages/Admin'
 
 export const publicRoutes = [
     {
@@ -38,5 +41,10 @@ export const publicRoutes = [
     {
         path: PART_ROUTE + '/:id',
         Component: PartPage
-    }
+    },
+    {
+        path: ADMIN_ROUTE,
+        Component: Admin
+    },
+    
 ]

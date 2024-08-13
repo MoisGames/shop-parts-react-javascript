@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PartItem.module.css'
 import {PART_ROUTE } from '../../../utils/const';
 import {useNavigate} from 'react-router-dom'
-import ButtonBuy from '../button/ButtonBuy';
+import ButtonBuy from '../button/ButtonBuy/ButtonBuy';
 import AvaibilityYes from '../../availability/AvaibilityYes';
 import AvailabilityNo from '../../availability/AvailabilityNo';
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from './styles/PartPage.module.css'
-import ButtonBuy from '../components/UI/button/ButtonBuy';
+import ButtonBuy from '../components/UI/button/ButtonBuy/ButtonBuy';
 import { useParams } from 'react-router-dom';
 import { fetchOneParts} from '../http/partAPI';
 import CategoryBar from '../components/UI/categoryBar/CategoryBar';
@@ -21,11 +21,10 @@ const PartPage = () => {
         availability = part.diksona + part.lado + part.semaf + part.kalinina
         return availability
     }
-    AvailabilityPart()
 
+    AvailabilityPart()
     useEffect(() => {
         fetchOneParts(id).then(data => setPart(data))
-        
     }, [])
 
     
