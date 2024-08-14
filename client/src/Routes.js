@@ -13,7 +13,6 @@ import OurShops from './pages/OurShops'
 import Contacts from './pages/Contacts'
 import WholeSalers from './pages/WholeSalers'
 import PartPage from './pages/PartPage'
-import { Component } from 'react'
 import Admin from './pages/Admin'
 
 export const publicRoutes = [

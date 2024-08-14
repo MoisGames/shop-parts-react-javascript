@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles/PartPage.module.css'
 import ButtonBuy from '../components/UI/button/ButtonBuy/ButtonBuy';
 import { useParams } from 'react-router-dom';
@@ -27,8 +27,6 @@ const PartPage = () => {
         fetchOneParts(id).then(data => setPart(data))
     }, [])
 
-    
-    
     return (
         
         <article className={styles.partPage__container_main}>

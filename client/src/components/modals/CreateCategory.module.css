@@ -35,3 +35,9 @@ body {
     width: 24px;
     height: 24px;
 }
+.createCategory__window_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+}
