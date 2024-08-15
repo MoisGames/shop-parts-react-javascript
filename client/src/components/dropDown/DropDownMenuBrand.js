@@ -3,6 +3,8 @@ import styles from './DropDownMenuBrand.module.css'
 import { Context } from '../../index.js';
 import { observer } from 'mobx-react-lite';
 import { fetchBrands} from '../../http/partAPI.js';
+import setSelectedBrand from '../../store/PartStore.js'
+import selectedBrand from '../../store/PartStore.js'
 
 const DropDownMenuBrand = observer (() => {
     const [show, setShow] = useState(false);
@@ -17,18 +19,25 @@ const DropDownMenuBrand = observer (() => {
             <button 
                 type='button' 
                 className={styles.dropdown__button} 
-                onClick={() => setShow(!show)}>
-                    Выберите бренд
+                onClick={() => setShow(!show)}
+                >
+                    {part.selectedBrand.name || "Выберите Бренд"}
             </button>
             
             {show && <ul className={styles.dropdown__items}>
                 {part.brands.map(brand => 
-                    <li className={styles.dropdown__items_row}>
-                        <a className={styles.dropdown__link} 
-                        href={brand.id} 
-                        key={brand.id}>
+                    <li 
+                        key={brand.id} 
+                        onMouseDown={() => part.setSelectedBrand(brand)}
+                        onMouseUp={() => setShow(!show)} 
+                        className={styles.dropdown__items_row}
+                        >
+                        <span 
+                        className={styles.dropdown__link}  
+                        key={brand.id}
+                        >
                             {brand.name}
-                        </a>
+                        </span>
                     </li>
                 )}
             </ul>}

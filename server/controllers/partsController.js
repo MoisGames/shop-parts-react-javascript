@@ -6,15 +6,15 @@ const ApiError = require('../error/ApiError')
 class PartsController {
     async create(req, res, next) {
         try {
-            const {id, groups, brands,analogue,name_parts,price,semaf,lado,kalinina, brandId, categoryId} = req.body
+            const {id, groups, brands,number_brand,analogue,name_parts,price,diksona,semaf,lado,kalinina, brandId, categoryId} = req.body
             const {img} = req.files
             let fileName = uuid.v4() + ".jpg"
             img.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const part = await Part.create({id, groups, brands,analogue,name_parts,price,semaf,lado,kalinina, brandId, categoryId, img: fileName})
+            const part = await Part.create({id, groups, brands,number_brand,analogue,name_parts,price,diksona,semaf,lado,kalinina, brandId, categoryId, img: fileName})
             return res.json({part})
         } catch (e) {
             console.log('Ошибка при создании новой запчасти');
-            next(ApiError.badRequest(e.message))
+            setTimeout(next(ApiError.badRequest(e.message)), 20000)
         }
     }
 

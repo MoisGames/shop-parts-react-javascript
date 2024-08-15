@@ -23,6 +23,11 @@ export const fetchParts = async () => {
     return data;
 }
 
+export const createPart = async (part) => {
+    const {data} = await $host.post('api/part', part)
+    return data;
+}
+
 export const fetchOneParts = async (id) => {
     const {data} = await $host.get('api/part/' + id)
     return data;
