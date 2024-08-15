@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './CreateCategory.module.css'
 import xImage from '../../../src/assets/image/X.png'
-import ButtonClose from '../../components/UI/button/ButtonCloseOpen/ButtonClose'
-import ButtonOpen from '../../components/UI/button/ButtonCloseOpen/ButtonOpen'
+import ButtonClose from '../UI/button/ButtonClose/ButtonClose'
+import ButtonAddItem from '../UI/button/ButtonAdd/ButtonAddItem'
 import InputForm from '../UI/input/InputForm';
 
 const CreateCategory = ({show, onHide}) => {
@@ -22,7 +22,7 @@ const CreateCategory = ({show, onHide}) => {
                     <div className={styles.createCategory__body_container}>
                         <InputForm placeholder='Введите название категории...'/>
                         <footer className={styles.createCategory__window_footer}>
-                        <ButtonOpen  />
+                        <ButtonAddItem />
                         <ButtonClose onClick={onHide} />
                         </footer>
                     </div>

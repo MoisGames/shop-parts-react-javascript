@@ -1,7 +1,8 @@
-.header {
+.Header {
     display: flex;
     flex-direction: row;
-    width: 70vh;
-    height: 400px;
+    width: 70vw;
+    height: auto;
     background-color: white;
+    border-bottom: 2px solid gray;
 }

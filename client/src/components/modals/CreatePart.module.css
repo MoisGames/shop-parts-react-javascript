@@ -1,6 +1,4 @@
-/* body {
-    overflow-x: hidden;
-} */
+
 @font-face {
     font-family: "Montserrat-Black"; 
     src: url("../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
@@ -16,19 +14,21 @@
     height: 100%;
     cursor: pointer;
     z-index: 1;
+    overflow: auto;
 }
 .createPart__active {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30vh 30vw 0 30vw;
+    margin: 5vh 30vw 0 30vw;
     width: 40vw;
-    height: 45vh;
-    
+    height: auto;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     cursor: default;
+    
+    
     
 }
 .createPart__close {

@@ -5,6 +5,7 @@ import styles from './CategoryBar.module.css'
 
 const CategoryBar = observer(() => {
     const {part} = useContext(Context);
+
     return (
         <ul className={styles.categoryBar__list}>
                 {part.categories.map(category => 

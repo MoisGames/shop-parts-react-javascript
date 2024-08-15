@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './CreateBrand.module.css'
 import xImage from '../../../src/assets/image/X.png'
-import ButtonClose from '../../components/UI/button/ButtonCloseOpen/ButtonClose'
-import ButtonOpen from '../../components/UI/button/ButtonCloseOpen/ButtonOpen'
+import ButtonClose from '../../components/UI/button/ButtonClose/ButtonClose'
+import ButtonAdd from '../UI/button/ButtonAdd/ButtonAddItem'
 import InputForm from '../UI/input/InputForm';
 
 const CreateBrand = ({show, onHide}) => {
@@ -20,7 +20,7 @@ const CreateBrand = ({show, onHide}) => {
                     <div className={styles.createBrand__body_container}>
                         <InputForm placeholder='Введите название бренда...'/>
                         <footer className={styles.createBrand__window_footer}>
-                        <ButtonOpen  />
+                        <ButtonAdd />
                         <ButtonClose onClick={onHide} />
                         </footer>
                     </div>
