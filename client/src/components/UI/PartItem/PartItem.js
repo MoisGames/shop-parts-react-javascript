@@ -29,7 +29,7 @@ const PartItem = ({part}) => {
                         <div className={styles.PartItem__name}>
                         {part.name_parts}
                         </div>
-                        <div>
+                        <div className={styles.PartItem__articol}>
                         Артикул: {part.id.toString().padStart(6, '0')}
                         </div>
                         <div className={styles.PartItem__price}>
