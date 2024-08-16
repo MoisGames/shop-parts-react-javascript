@@ -6,16 +6,23 @@
     margin: 20px;
 }
 .pages__row_container {
-    display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    line-clamp: 12;
+    -webkit-box-orient:horizontal;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
     border: 2px solid black;
     border-radius: 50px;
+    max-width: 40vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .pages__item {
     display: flex;
+    line-clamp: 12;
     justify-content: center;
     align-items: center;
     width: 2vw;
@@ -28,4 +35,10 @@
 }
 .pages__item:hover {
     box-shadow: 0 0 5px 5px var(--primary-color-yellow);
+}
+.pages__item:active {
+    background-color: var(--primary-color-yellow) ;
+}
+.li-active {
+    background-color: var(--primary-color-yellow) 
 }

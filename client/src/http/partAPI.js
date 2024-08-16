@@ -18,8 +18,10 @@ export const createBrand = async (brand) => {
     return data;
 }
 
-export const fetchParts = async () => {
-    const {data} = await $host.get('api/part')
+export const fetchParts = async (categoryId,brandId,page,limit = 12) => {
+    const {data} = await $host.get('api/part', {params: {
+        categoryId,brandId,page,limit
+    }})
     return data;
 }
 

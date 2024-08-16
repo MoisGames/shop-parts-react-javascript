@@ -15,8 +15,19 @@ const Shop = observer (() => {
     useEffect(() => {
         fetchCategories().then(data => part.setCategories(data))
         fetchBrands().then(data => part.setBrands(data))
-        fetchParts().then(data => part.setParts(data.rows))
+        fetchParts(null,null,1,12).then(data => {
+            part.setParts(data.rows)
+            part.setTotalCount(data.count)
+        })
+            
     }, [])
+
+    useEffect(() => {
+        fetchParts(part.selectedCategory.id,part.selectedBrand.id,part.page,part.limit).then(data => {
+            part.setParts(data.rows)
+            part.setTotalCount(data.count)
+        })
+    },[part.page,part.selectedCategory,part.selectedBrand,])
 
     return (
         <main className={styles.shop__main_container}>
