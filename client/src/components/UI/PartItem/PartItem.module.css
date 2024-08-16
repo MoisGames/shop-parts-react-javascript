@@ -7,7 +7,7 @@
 .PartItem__container {
     display: flex;
     margin: 5px;
-    width: 230px;
+    width: 220px;
     height: 600px;
     cursor: pointer;
     border-bottom: 1px #3b444b solid;
