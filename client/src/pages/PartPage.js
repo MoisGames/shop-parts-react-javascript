@@ -8,14 +8,18 @@ import BrandBar from '../components/UI/brandBar/BrandBar';
 import AvaibilityYes from '../components/availability/AvaibilityYes'
 import AvailabilityNo from '../components/availability/AvailabilityNo'
 import AvailabilityStore from '../components/availability/store/AvailabilityStore';
+import { observer } from 'mobx-react-lite';
 
 
 
-const PartPage = () => {
+const PartPage = observer ( () => {
     const [part, setPart] = useState({})
     
     const {id} = useParams()
     let availability = 0
+    // const articol = part.id.toString().padStart(6, '0')
+    
+    
 
     const AvailabilityPart = () => {
         availability = part.diksona + part.lado + part.semaf + part.kalinina
@@ -27,6 +31,15 @@ const PartPage = () => {
         fetchOneParts(id).then(data => setPart(data))
     }, [])
 
+    let articol = '';
+    const convertArticol = () => {
+        if (part.id !== undefined) {
+            articol = part.id.toString().padStart(6, '0')
+        } else {
+            articol = ''
+        }
+    }
+    convertArticol()
     return (
         
         <article className={styles.partPage__container_main}>
@@ -63,7 +76,8 @@ const PartPage = () => {
                         </tr>
                         <tr>
                             <td className={styles.partPage__specification_sheet_first_column_design}>Артикул:</td>
-                            <td className={styles.partPage__specification_sheet_second_column_design}>{part.id}</td>
+                            <td className={styles.partPage__specification_sheet_second_column_design}>{articol}
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -102,6 +116,6 @@ const PartPage = () => {
             </div>
         </article>
     );
-};
+});
 
 export default PartPage;
