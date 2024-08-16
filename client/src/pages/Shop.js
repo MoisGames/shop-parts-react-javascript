@@ -6,6 +6,8 @@ import PartList from '../components/UI/PartList/PartList';
 import { observer } from 'mobx-react-lite';
 import { Context } from '../../src/index';
 import { fetchBrands, fetchCategories, fetchParts } from '../http/partAPI';
+import Footer from '../components/UI/footer/Footer'
+import Pages from './Pages';
 
 const Shop = observer (() => {
     const {part} = useContext(Context)
@@ -20,12 +22,14 @@ const Shop = observer (() => {
         <main className={styles.shop__main_container}>
             <div className={styles.shop__div_container_category}>
             <CategoryBar/>
-            
             </div>
             <div className={styles.shop__div_container_brand_part}>
             <BrandBar/>
             <PartList/>
+            <Pages />
+            <Footer />
             </div>
+            
         </main>
     );
 });
