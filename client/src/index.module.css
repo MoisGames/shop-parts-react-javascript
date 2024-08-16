@@ -18,8 +18,9 @@ body {
     align-items: center;
     font-family: "Montserrat-Light","Helvetica","Arial",sans-serif;
     width: 100%;
+    
 }
 
-.App {
+App {
     width: 70vw;
 }

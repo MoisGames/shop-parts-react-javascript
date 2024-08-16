@@ -1,8 +1,21 @@
-.Header {
+.header__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
     width: 70vw;
     height: auto;
     background-color: white;
     border-bottom: 2px solid gray;
+    
+}
+.header__container_search {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+}
+.header {
+    position: relative;
 }
