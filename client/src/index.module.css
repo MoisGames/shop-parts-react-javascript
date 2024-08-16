@@ -23,4 +23,9 @@ body {
 
 App {
     width: 70vw;
+    
+}
+#App {
+        background-color: aqua;
+
 }

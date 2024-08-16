@@ -6,6 +6,7 @@ import SearchInput from '../input/SearchInput';
 const Header = () => {
     return (
         <header className={styles.header}>
+            <div className={styles.header__background}></div>
             <div className={styles.header__container} >
                 <NavBar />
                 <div className={styles.header__container_search}>

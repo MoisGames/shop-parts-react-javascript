@@ -7,9 +7,12 @@ import AppRouter from './components/AppRouter.js'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <AppRouter />
+    <BrowserRouter >
+    <div className={styles.app__background}></div>
+    <div className={styles.app__container}>
+    <Header />
+    <AppRouter />
+    </div>
     </BrowserRouter>
     
   );
