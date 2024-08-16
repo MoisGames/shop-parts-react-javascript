@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './NavBar/NavBar';
 import styles from './Header.module.css'
 import SearchInput from '../input/SearchInput';
+import ButtonBasket from '../button/ButtonBasket/ButtonBasket';
 
 const Header = () => {
     return (
@@ -11,6 +12,7 @@ const Header = () => {
                 <NavBar />
                 <div className={styles.header__container_search}>
                     <SearchInput />
+                    <ButtonBasket />
                 </div>
                 <hr/>
             </div>
