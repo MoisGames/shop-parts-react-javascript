@@ -6,6 +6,7 @@
   } 
 .partPage__container_main {
     display: flex;
+    margin-top: 20px;
 }
 .partPage__container_brand {
     display: flex;
