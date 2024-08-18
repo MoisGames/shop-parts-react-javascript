@@ -7,6 +7,6 @@
 <p>В папке dump-base содержится копия базы PostgreSQL</p>
 <p>В папке server - сервер на Node JS</p>
 <p>Примеры работы сайта:</p>
-<img src="https://ibb.co/ZVSwL2W" />
-<img src="https://ibb.co/D4XG24j" />
-<img src="https://ibb.co/C8BbZvN" />
+<img src="https://i.ibb.co/xDYcCFJ/11.png" alt="11" border="0">
+<img src="https://i.ibb.co/F6vsT6d/22.png" alt="22" border="0">
+<img src="https://i.ibb.co/qjBNf9X/33.png" alt="33" border="0">
