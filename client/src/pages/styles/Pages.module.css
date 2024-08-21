@@ -22,7 +22,6 @@
 }
 .pages__item {
     display: flex;
-    line-clamp: 12;
     justify-content: center;
     align-items: center;
     width: 2vw;
@@ -31,14 +30,38 @@
     border: 2px solid black;
     border-radius: 15px;
     margin: 5px;
+    background-color: white;
     
+}
+.pages__item:disabled {
+    display: flex;
+    line-clamp: 12;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    margin: 5px;
+    background-color: white;
+}
+.pages__item_button_next_back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: white;
+    font-size: 24px;
+}
+.pages__item_button_next_back:disabled {
+    cursor:not-allowed;
 }
 .pages__item:hover {
     box-shadow: 0 0 5px 5px var(--primary-color-yellow);
-}
-.pages__item:active {
-    background-color: var(--primary-color-yellow) ;
-}
-.li-active {
-    background-color: var(--primary-color-yellow) 
 }
