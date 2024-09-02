@@ -6,7 +6,7 @@ import ButtonAdd from '../UI/button/ButtonAdd/ButtonAddItem'
 import {Context} from '../../index'
 import DropDownMenuCategory from '../dropDown/DropDownMenuCategory';
 import DropDownMenuBrand from '../dropDown/DropDownMenuBrand';
-import InputForm from '../UI/input/InputForm';
+import InputForm from '../UI/input/InputForm/InputForm';
 import { observer } from 'mobx-react-lite';
 import { createPart } from '../../http/partAPI';
 import selectedCategory from '../../store/PartStore'

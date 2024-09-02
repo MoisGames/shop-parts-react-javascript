@@ -3,7 +3,7 @@ import styles from './CreateBrand.module.css'
 import xImage from '../../../src/assets/image/X.png'
 import ButtonClose from '../../components/UI/button/ButtonClose/ButtonClose'
 import ButtonAddItem from '../UI/button/ButtonAdd/ButtonAddItem'
-import InputForm from '../UI/input/InputForm';
+import InputForm from '../UI/input/InputForm/InputForm';
 import { createBrand } from '../../http/partAPI';
 
 const CreateBrand = ({show, onHide}) => {

@@ -8,6 +8,7 @@ import { Context } from '../../src/index';
 import { fetchBrands, fetchCategories, fetchParts } from '../http/partAPI';
 import Footer from '../components/UI/footer/Footer'
 import Pages from './Pages';
+import Filters from '../components/Filters';
 
 const Shop = observer (() => {
     const {part} = useContext(Context)
@@ -36,6 +37,7 @@ const Shop = observer (() => {
             </div>
             <div className={styles.shop__div_container_brand_part}>
             <BrandBar/>
+            <Filters />
             <PartList/>
             <Pages />
             <Footer />

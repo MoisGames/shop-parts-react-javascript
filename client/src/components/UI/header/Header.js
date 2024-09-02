@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
 import styles from './Header.module.css'
-import SearchInput from '../input/SearchInput';
+import SearchInput from '../input/SearchInput/SearchInput';
 import ButtonBasket from '../button/ButtonBasket/ButtonBasket';
 
 const Header = () => {

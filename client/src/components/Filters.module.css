@@ -1,0 +1,8 @@
+.filters__container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}

@@ -3,7 +3,7 @@ import styles from './CreateCategory.module.css'
 import xImage from '../../../src/assets/image/X.png'
 import ButtonClose from '../UI/button/ButtonClose/ButtonClose'
 import ButtonAddItem from '../UI/button/ButtonAdd/ButtonAddItem'
-import InputForm from '../UI/input/InputForm';
+import InputForm from '../UI/input/InputForm/InputForm';
 import {createCategory } from '../../http/partAPI'
 
 const CreateCategory = ({show, onHide}) => {
