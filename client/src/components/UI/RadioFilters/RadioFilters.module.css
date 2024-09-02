@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Montserrat-black"; 
+    src: url("../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  }
+@font-face {
+    font-family: "Montserrat-Light"; 
+    src: url("../../../assets/fonts/Montserrat-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+  /* .radioFilters__container {
+    
+} */
+
+.radioFilters__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 0 0px 5px;
+    padding: 5px;
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 18px;
+    cursor: pointer;
+}
+.radioFilters__dropdown_content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 15vw;
+    height: 20vh;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-family:  "Montserrat-Light", 'Courier New', Courier, monospace;
+    font-size: 18px;
+    z-index: 100;
+    background-color: white;
+    
+}
+.radioFilters__sort_content_up {
+    width: 85.6%;
+    height: 4vh;
+    border-radius: 50px 50px 0 0;
+    padding: 10px 20px 10px 20px;
+}
+.radioFilters__sort_content {
+    width: 85.6%;
+    height: 4vh;
+    padding: 10px 20px 10px 20px;
+}
+
+.radioFilters__sort_content:hover,.radioFilters__sort_content_up:hover {
+    background-color: rgb(236, 236, 40);
+}
+.radioFilters__label {
+    margin: 10px;
+    padding: 5px;
+    width: 15vw;
+    height: 4vh;
+}
+.radioFilters__button:focus .radioFilters__dropdown_content {
+    display: flex;
+}

@@ -8,7 +8,7 @@ import { Context } from '../../src/index';
 import { fetchBrands, fetchCategories, fetchParts } from '../http/partAPI';
 import Footer from '../components/UI/footer/Footer'
 import Pages from './Pages';
-import Filters from '../components/Filters';
+import Filters from '../components/UI/RadioFilters/Filters';
 
 const Shop = observer (() => {
     const {part} = useContext(Context)

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Montserrat-black"; 
+    src: url("../../../../assets/fonts/Montserrat-Black.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  }
+.buttonRadioFilters__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 0 0px 5px;
+    padding: 5px;
+    font-family:  "Montserrat-Black", 'Courier New', Courier, monospace;
+    font-size: 18px;
+    cursor: pointer;
+}
